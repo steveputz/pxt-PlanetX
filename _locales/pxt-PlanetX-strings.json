@@ -181,6 +181,7 @@
   "PlanetX_Display.matrixEmoji|block": "Matrix show emoji %ID",
   "PlanetX_Display.matrixRefresh|block": "Matrix Refresh",
   "PlanetX_Display.oledClear|block": "clear display",
+  "PlanetX_Display.oledinit|block": "init display",
   "PlanetX_Display.rgb|block": "red %red|green %green|blue %blue",
   "PlanetX_Display.showUserNumber|block": "OLED show line %line|number %n",
   "PlanetX_Display.showUserText|block": "OLED show line %line|text %text",
