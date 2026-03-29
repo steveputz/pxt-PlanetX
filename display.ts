@@ -404,34 +404,6 @@ namespace PlanetX_Display {
         }
         matrixRefresh();
     }
-    //% block="init display" color=#00B1ED
-    //% subcategory=Display group="OLED"
-    export function oledinit(): void {
-        oledcmd(0xAE);  // Set display OFF
-        oledcmd(0xD5);  // Set Display Clock Divide Ratio / OSC Frequency 0xD4
-        oledcmd(0x80);  // Display Clock Divide Ratio / OSC Frequency 
-        oledcmd(0xA8);  // Set Multiplex Ratio
-        oledcmd(0x3F);  // Multiplex Ratio for 128x64 (64-1)
-        oledcmd(0xD3);  // Set Display Offset
-        oledcmd(0x00);  // Display Offset
-        oledcmd(0x40);  // Set Display Start Line
-        oledcmd(0x8D);  // Set Charge Pump
-        oledcmd(0x14);  // Charge Pump (0x10 External, 0x14 Internal DC/DC)
-        oledcmd(0xA1);  // Set Segment Re-Map
-        oledcmd(0xC8);  // Set Com Output Scan Direction
-        oledcmd(0xDA);  // Set COM Hardware Configuration
-        oledcmd(0x12);  // COM Hardware Configuration
-        oledcmd(0x81);  // Set Contrast
-        oledcmd(0xCF);  // Contrast
-        oledcmd(0xD9);  // Set Pre-Charge Period
-        oledcmd(0xF1);  // Set Pre-Charge Period (0x22 External, 0xF1 Internal)
-        oledcmd(0xDB);  // Set VCOMH Deselect Level
-        oledcmd(0x40);  // VCOMH Deselect Level
-        oledcmd(0xA4);  // Set all pixels OFF
-        oledcmd(0xA6);  // Set display not inverted
-        oledcmd(0xAF);  // Set display On
-        oledClear();
-    }
     //% line.min=1 line.max=8 line.defl=1
     //% text.defl="Hello,ELECFREAKS"
     //% block="OLED show line %line|text %text"
@@ -481,6 +453,34 @@ namespace PlanetX_Display {
         }
         //oledcmd(DISPLAY_ON);    //display on
         setText(0, 0);
+    }
+    //% block="init display" color=#00B1ED
+    //% subcategory=Display group="OLED"
+    export function oledinit(): void {
+        oledcmd(0xAE);  // Set display OFF
+        oledcmd(0xD5);  // Set Display Clock Divide Ratio / OSC Frequency 0xD4
+        oledcmd(0x80);  // Display Clock Divide Ratio / OSC Frequency 
+        oledcmd(0xA8);  // Set Multiplex Ratio
+        oledcmd(0x3F);  // Multiplex Ratio for 128x64 (64-1)
+        oledcmd(0xD3);  // Set Display Offset
+        oledcmd(0x00);  // Display Offset
+        oledcmd(0x40);  // Set Display Start Line
+        oledcmd(0x8D);  // Set Charge Pump
+        oledcmd(0x14);  // Charge Pump (0x10 External, 0x14 Internal DC/DC)
+        oledcmd(0xA1);  // Set Segment Re-Map
+        oledcmd(0xC8);  // Set Com Output Scan Direction
+        oledcmd(0xDA);  // Set COM Hardware Configuration
+        oledcmd(0x12);  // COM Hardware Configuration
+        oledcmd(0x81);  // Set Contrast
+        oledcmd(0xCF);  // Contrast
+        oledcmd(0xD9);  // Set Pre-Charge Period
+        oledcmd(0xF1);  // Set Pre-Charge Period (0x22 External, 0xF1 Internal)
+        oledcmd(0xDB);  // Set VCOMH Deselect Level
+        oledcmd(0x40);  // VCOMH Deselect Level
+        oledcmd(0xA4);  // Set all pixels OFF
+        oledcmd(0xA6);  // Set display not inverted
+        oledcmd(0xAF);  // Set display On
+        oledClear();
     }
     /**
    * Create a new driver Grove - 4-Digit Display
